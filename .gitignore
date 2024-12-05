@@ -1,0 +1,62 @@
+# Sistema
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.userosscache
+*.suo
+*.user
+*.userprefs
+*.log
+*.ide
+*.ilk
+*.pdb
+*.obj
+*.cache
+*.csproj.user
+.vs/
+.vscode/
+
+# Configurações locais
+*.localhistory
+*.DS_Store
+*.swp
+Thumbs.db
+*~
+
+# Binários e compilação
+bin/
+obj/
+out/
+*.dll
+*.exe
+
+# Pacotes
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+
+# Logs e Relatórios
+*.log
+*.dmp
+*.err
+*.trace
+TestResult.xml
+TestResults/
+
+# Dependências de sistema
+node_modules/
+bower_components/
+lib/
+
+# Outros
+*.db
+*.sqlite
+*.bak
+*.sql
+*.tar.gz
+*.tgz
+
+# Respeitar pacotes configurados no projeto
+!*.nuspec
