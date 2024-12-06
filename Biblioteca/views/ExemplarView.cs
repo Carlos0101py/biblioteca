@@ -1,11 +1,12 @@
 using System;
 using Biblioteca.models;
+using Biblioteca.models.abstractClasses;
 
 namespace Biblioteca.views
 {
     public class ExemplarView
     {
-        public void ExibirInformacoes(Livro livro)
+        public void ExibirInformacoes(Exemplar livro)
         {
             Console.WriteLine("Informações:");
             Console.WriteLine($"Título: {livro.Titulo}");

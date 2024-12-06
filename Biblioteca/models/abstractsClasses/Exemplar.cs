@@ -7,7 +7,7 @@ namespace Biblioteca.models.abstractClasses
         private int _id;
         private string _titulo;
         private string _autor;
-        private string _editora;
+        private string _editora; 
         private int _numeroDePaginas;
         private string _genero;
         private float _preco;
