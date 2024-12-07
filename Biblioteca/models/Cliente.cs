@@ -4,9 +4,8 @@ namespace Biblioteca.models
 {
     public class Cliente : Cadastro
     {
-        public Cliente(string nomeUsuario, string senha) : base(nomeUsuario, senha)
+        public Cliente(string nomeUsuario, string email, string senha) : base(nomeUsuario, email, senha)
         {
-            
         }
     }
 }

@@ -3,20 +3,33 @@ using Biblioteca.controllers;
 using Biblioteca.interfaces;
 using Biblioteca.models;
 using Biblioteca.views;
-
+using DotNetEnv;
+using System.Data.SqlClient;
+using Biblioteca.config;
+using Biblioteca.sql;
 
 public class Program
 {
     public static void Main()
     {
-        Livro livro1 = new Livro("meu ovo de chapel", "carlos", "brasilio", 10, "acao", 1);
+        Env.TraversePath().Load();
 
-        ExemplarView view = new ExemplarView();
+        string? connectionString = Environment.GetEnvironmentVariable("DBCONNECTION");
 
-        ExemplarController controller = new ExemplarController(view);
+        if(!string.IsNullOrEmpty(connectionString))
+        {            
+            try
+            {
+                var db = new Database(connectionString);
 
-        controller.ExebirInformacoes(livro1);
+                var exemplarTable = new ExemplarTable(db); 
+                exemplarTable.CriarExemplarTable();
 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Erro: {e.Message}");
+            }
+        }  
     }
-
 }
