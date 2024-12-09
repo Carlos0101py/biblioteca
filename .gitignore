@@ -57,6 +57,7 @@ lib/
 *.sql
 *.tar.gz
 *.tgz
+*.env
 
 # Respeitar pacotes configurados no projeto
 !*.nuspec
