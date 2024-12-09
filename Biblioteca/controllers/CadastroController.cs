@@ -1,3 +1,4 @@
+using Biblioteca.config;
 using Biblioteca.controllers.interfaces;
 using Biblioteca.models.abstractClasses;
 using Biblioteca.views;
@@ -8,10 +9,12 @@ namespace Biblioteca.controllers
     {
 
         private readonly CadastroView _cadastroView;
+        private readonly Database _dataBase;
 
-        public CadastroController(CadastroView cadastroView)
+        public CadastroController(CadastroView cadastroView, Database database)
         {
             _cadastroView = cadastroView;
+            _dataBase = database;
         } 
 
         public void CriarNovoCadastro(Cadastro cadastro)

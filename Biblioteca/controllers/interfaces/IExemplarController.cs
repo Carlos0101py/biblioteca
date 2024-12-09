@@ -6,10 +6,10 @@ namespace Biblioteca.controllers
 {
     public interface IExemplarController
     {
-        void CriarNovoExemplar(Exemplar exemplar);
-        void ExebirInformacoes(Exemplar exemplar);
-        void EditarExemplar(Exemplar exemplar);
-        void excluirExemplar(Exemplar exemplar);
+        void CriarNovoExemplar();
+        void ExebirInformacoes(Livro exemplar);
+        void EditarExemplar(Livro exemplar);
+        void excluirExemplar(Livro exemplar);
 
     }
 }

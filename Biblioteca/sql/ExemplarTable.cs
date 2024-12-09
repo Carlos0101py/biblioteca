@@ -16,7 +16,7 @@ namespace Biblioteca.sql
             try
             {
                 string query = @"
-                    IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'tb_=exemplar')
+                    IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'tb_exemplar')
                     BEGIN
                         CREATE TABLE tb_exemplar(
                             Id INT PRIMARY KEY IDENTITY(1,1),

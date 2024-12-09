@@ -6,7 +6,7 @@ namespace Biblioteca.views
 {
     public class ExemplarView
     {
-        public void ExibirInformacoes(Exemplar livro)
+        public void ExibirInformacoes(Livro livro)
         {
             Console.WriteLine("Informações:");
             Console.WriteLine($"Título: {livro.Titulo}");

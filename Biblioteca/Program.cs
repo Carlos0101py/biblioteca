@@ -20,10 +20,15 @@ public class Program
         {            
             try
             {
-                var db = new Database(connectionString);
+                var db = new Database(connectionString); 
+                CadastroView viewCadastro = new();           
+                ExemplarView viewExemplar = new();           
+                Menu Menu = new();
+                var cadastroController = new CadastroController(viewCadastro, db);
+                var ExemplarController = new ExemplarController(viewExemplar, db);
 
-                var exemplarTable = new ExemplarTable(db); 
-                exemplarTable.CriarExemplarTable();
+                ExemplarController.CriarNovoExemplar();
+
 
             }
             catch (Exception e)
